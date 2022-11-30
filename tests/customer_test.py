@@ -22,9 +22,15 @@ class TestCustomer(unittest.TestCase):
         self.customer_1.take_money(5.00)
         self.assertEqual(5.00, self.customer_1.wallet)
 
-    def test_increase_drunkenness(self):
-        self.customer_1.increase_drunkenness(5)
+    def test_change_drunkenness__increase(self):
+        self.customer_1.change_drunkenness(5)
         self.assertEqual(7, self.customer_1.drunkenness)
+
+
+    def test_change_drunkenness__decrease(self):
+        self.customer_1.change_drunkenness(-5)
+        self.assertEqual(0, self.customer_1.drunkenness)
+
 
     
 

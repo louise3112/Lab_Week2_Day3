@@ -8,8 +8,10 @@ class Customer:
     def take_money(self, amount):
         self.wallet -= amount
 
-    def increase_drunkenness(self, amount):
+    def change_drunkenness(self, amount):
         self.drunkenness += amount
+        if self.drunkenness < 0:
+            self.drunkenness = 0
 
     
 

@@ -12,5 +12,10 @@ class Pub:
             customer.take_money(drink.price)
             self.add_money(drink.price)
             # customer.drunkenness += drink.alchol_level
-            customer.increase_drunkenness(drink.alchol_level)
+            customer.change_drunkenness(drink.alchol_level)
+
+    def sell_food(self, customer, food):
+        customer.take_money(food.price)
+        self.add_money(food.price)
+        customer.change_drunkenness(food.rejuvenation_level)
             
