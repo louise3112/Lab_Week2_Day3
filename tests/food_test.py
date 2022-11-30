@@ -2,8 +2,10 @@ import unittest
 from src.food import Food
 
 class TestFood(unittest.TestCase):
+
     def setUp(self):
         self.food_1 = Food("burger", 10, -5)
+        
     def test_food_has_name(self):
         self.assertEqual("burger", self.food_1.name)
 
