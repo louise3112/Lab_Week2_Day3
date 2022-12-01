@@ -5,7 +5,7 @@ class Customer:
         self.age = input_age
         self.drunkenness = input_drunkenness
 
-    def take_money(self, amount):
+    def reduce_wallet(self, amount):
         self.wallet -= amount
 
     def change_drunkenness(self, amount):

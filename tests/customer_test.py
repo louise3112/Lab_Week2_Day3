@@ -17,17 +17,17 @@ class TestCustomer(unittest.TestCase):
     def test_customer_has_age(self):
         self.assertEqual(18, self.customer_1.age)
 
-    def test_customer_drunkenness_starts_at_0(self):
+    def test_customer_has_drunkenness_value(self):
         self.assertEqual(2, self.customer_1.drunkenness)
 
-    def test_take_money(self):
-        self.customer_1.take_money(5.00)
+    def test_reduce_wallet(self):
+        self.customer_1.reduce_wallet(5.00)
         self.assertEqual(5.00, self.customer_1.wallet)
 
     def test_change_drunkenness__increase(self):
         self.customer_1.change_drunkenness(5)
         self.assertEqual(7, self.customer_1.drunkenness)
-        
+
     def test_change_drunkenness__decrease(self):
         self.customer_1.change_drunkenness(-5)
         self.assertEqual(0, self.customer_1.drunkenness)
